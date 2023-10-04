@@ -7,4 +7,3 @@ Flow:
 4. Transformed data written to BigQuery
 5. Spark cluster auto-terminates after transformation
 6. Data pipeline orchestrated via Cloud Composer
-7. Prepare dashboard using Looker (BigQuery to be the data source)
