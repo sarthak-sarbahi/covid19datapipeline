@@ -1,5 +1,14 @@
 Use case inspiration: https://medium.com/dev-genius/data-engineering-project-analyzing-covid-data-3db7c15c57dc
 
+Prerequisites:
+1. Created a service account with following roles:
+    - BigQuery Admin
+    - Composer Administrator
+    - Dataproc Administrator
+    - Editor
+    - Storage Admin
+2. Python file in GCS for Dataproc to execute (main.py)
+
 Flow:
 1. Fetch data in JSON from an API (https://covidtracking.com/data/api/version-2)
 2. Write to a bucket in Google Cloud Storage
