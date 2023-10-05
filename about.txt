@@ -8,6 +8,7 @@ Prerequisites:
     - Editor
     - Storage Admin
 2. Python file in GCS for Dataproc to execute (main.py)
+3. Create dataset in BigQuery
 
 Flow:
 1. Fetch data in JSON from an API (https://covidtracking.com/data/api/version-2)
@@ -15,4 +16,8 @@ Flow:
 3. Spin up Spark job to transform data using Dataproc
 4. Transformed data written to BigQuery
 5. Spark cluster auto-terminates after transformation
-6. Data pipeline orchestrated via Cloud Composer
+
+Execute: python3 src/main.py
+
+Future scope:
+1. Use Apache Airflow to orchestrate the data pipeline
