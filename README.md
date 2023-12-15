@@ -9,7 +9,7 @@
     - Dataproc Administrator
     - Editor
     - Storage Admin
-2. Upload Python file in GCS for Dataproc to execute (`main.py`)
+2. Upload Python file in GCS for Dataproc to execute (`transform.py`)
 3. Create dataset in BigQuery
 
 **Data pipeline**:
