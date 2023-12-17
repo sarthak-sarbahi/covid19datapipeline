@@ -15,13 +15,13 @@ from google.cloud import dataproc_v1 as dataproc
 from time import sleep
 
 API_URL = "https://api.covidtracking.com/v2/us/daily.json"
-GCP_BUCKET_NAME = "covid19data_ss"
-BQ_WRITE_BUCKET_NAME = "covid19data_ss_bq_write"
+GCP_BUCKET_NAME = "covid19data_demo"
+BQ_WRITE_BUCKET_NAME = "covid19data_demo_bq_write"
 DATA_DESTINATION_NAME = "covidtrackingdata.json"
-PROJECT_ID = "sunlit-vortex-394519"
+PROJECT_ID = "concise-display-407818"
 CLUSTER_NAME = "cluster-07bc"
 REGION = "us-central1"
-DATAPROC_JOB_FILE = "gs://covid19data_ss/scripts/transform.py"
+DATAPROC_JOB_FILE = "gs://covid19data_demo/transform.py"
 SERVICE_ACCOUNT_JSON_PATH = "/home/infernape/gcp-projects/covid19datapipeline/service_account_secrets.json"
 client = storage.Client.from_service_account_json(SERVICE_ACCOUNT_JSON_PATH)
 
@@ -34,7 +34,6 @@ def create_bucket_if_not_exists(bucket_name, project_id):
         bucket = client.create_bucket(bucket_name, project=project_id)
         print(f"Bucket {bucket_name} created.")
 
-create_bucket_if_not_exists(GCP_BUCKET_NAME, PROJECT_ID)
 create_bucket_if_not_exists(BQ_WRITE_BUCKET_NAME, PROJECT_ID)
 
 # Fetch JSON data from the API

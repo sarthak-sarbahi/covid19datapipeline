@@ -5,7 +5,6 @@
 **Prerequisites**:
 1. Create a service account with following roles:
     - BigQuery Admin
-    - Composer Administrator
     - Dataproc Administrator
     - Editor
     - Storage Admin

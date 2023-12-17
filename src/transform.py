@@ -3,8 +3,8 @@ from pyspark.sql.types import StructType, StructField, StringType, IntegerType, 
 from pyspark.sql.functions import col
 
 spark = SparkSession.builder.appName("ProcessingData").getOrCreate()
-INPUT_FILE = "gs://covid19data_ss/covidtrackingdata.json"
-PROJECT_ID = "sunlit-vortex-394519"
+INPUT_FILE = "gs://covid19data_demo/covidtrackingdata.json"
+PROJECT_ID = "concise-display-407818"
 DATASET_ID = "covid19data"
 TABLE_ID = "covid19table"
 
