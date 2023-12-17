@@ -4,6 +4,7 @@ from pyspark.sql.functions import col
 
 spark = SparkSession.builder.appName("ProcessingData").getOrCreate()
 INPUT_FILE = "gs://covid19data_demo/covidtrackingdata.json"
+BQ_WRITE_BUCKET_NAME = "covid19data_demo_bq_write"
 PROJECT_ID = "concise-display-407818"
 DATASET_ID = "covid19data"
 TABLE_ID = "covid19table"
@@ -131,7 +132,7 @@ transform_df.show(1,truncate = False)
     transform_df
     .write
     .format("bigquery")
-    .option("temporaryGcsBucket","covid19data_ss_bq_write")
+    .option("temporaryGcsBucket",BQ_WRITE_BUCKET_NAME)
     .option("table", f"{PROJECT_ID}:{DATASET_ID}.{TABLE_ID}")
     .mode('overwrite')
     .save()
