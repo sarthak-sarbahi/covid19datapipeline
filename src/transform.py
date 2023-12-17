@@ -5,7 +5,7 @@ from pyspark.sql.functions import col
 spark = SparkSession.builder.appName("ProcessingData").getOrCreate()
 INPUT_FILE = "gs://covid19data_demo/covidtrackingdata.json"
 BQ_WRITE_BUCKET_NAME = "covid19data_demo_bq_write"
-PROJECT_ID = "concise-display-407818"
+PROJECT_ID = ""
 DATASET_ID = "covid19data"
 TABLE_ID = "covid19table"
 
